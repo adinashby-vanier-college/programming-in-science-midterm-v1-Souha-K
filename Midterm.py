@@ -43,12 +43,10 @@ def inverted_pyramid(n):
             for j in range(i):
                 result += ' '
 
-            for k in range((n * 2) - (i * 2) + 1):
+            for k in range((n * 2) - (i * 2) - 1):
                 result += '*'
                         
             result += '\n'
-        
-        result += ((n)  * ' ' + '*')
             
     return result.rstrip()
 

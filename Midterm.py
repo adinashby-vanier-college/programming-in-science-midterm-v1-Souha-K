@@ -8,16 +8,19 @@ def area_of_circle(radius):
 def hollow_right_triangle(n):
         result = ''
         
-        for i in range(n):
+        for i in range(n - 1):
+
+            result += '*'
 
             if (i > 0):
-                for j in range(i):
-                    result += '.'
+                for j in range(i - 1):
+                    result += ' '
                 
-                result += '#'
+                result += '*'
                             
             result += '\n'
-            
+        
+        result += ((n)  * '*')
         return result.rstrip()
 
 

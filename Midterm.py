@@ -7,39 +7,48 @@ def area_of_circle(radius):
 # Q2: Hollow Right Triangle
 def hollow_right_triangle(n):
         result = ''
-        
-        for i in range(n - 1):
+    
+        if (n < 4):
+            result = 'The triangle height should be at least 4.'
+            
+        elif (n >= 4):
+            for i in range(n - 1):
 
-            result += '*'
-
-            if (i > 0):
-                for j in range(i - 1):
-                    result += ' '
-                
                 result += '*'
-                            
-            result += '\n'
-        
-        result += ((n)  * '*')
+
+                if (i > 0):
+                    for j in range(i - 1):
+                        result += ' '
+                     
+                    result += '*'
+                                
+                result += '\n'
+                
+            result += ((n)  * '*')
         return result.rstrip()
 
 
 # Q3: Inverted Pyramid
 def inverted_pyramid(n):  
     result = ''
-        
-    for i in range(n):
 
-        for j in range(i):
-            result += ' '
 
-        for k in range((n * 2) - (i * 2)):
-            result += '*'
-                    
-        result += '\n'
-    
-    result += ((n)  * ' ' + '*')
+    if (n == 2):
+        result = 'The pyramid height should be at least 3.'
+
+    elif (n >= 3):
+        for i in range(n):
+
+            for j in range(i):
+                result += ' '
+
+            for k in range((n * 2) - (i * 2) + 1):
+                result += '*'
+                        
+            result += '\n'
         
+        result += ((n)  * ' ' + '*')
+            
     return result.rstrip()
 
 

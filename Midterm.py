@@ -33,10 +33,11 @@ def inverted_pyramid(n):
     result = ''
 
 
-    if (n == 2):
+    if (n <= 2):
         result = 'The pyramid height should be at least 3.'
 
-    elif (n >= 3):
+
+    if (n >= 3):
         for i in range(n):
 
             for j in range(i):
